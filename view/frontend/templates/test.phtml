@@ -5,3 +5,22 @@
 ?>
 
 <h1>Test UiComponent</h1>
+
+<div data-bind="scope: 'test-ui'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "test-ui": {
+                            "component": "Test_UiComponent/js/model/test",
+                            "template" : "Test_UiComponent/test"
+                        }
+                    }
+                }
+            }
+        }
+</script>
